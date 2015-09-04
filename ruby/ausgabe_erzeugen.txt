@@ -11,7 +11,7 @@ Zusammengesetzte Ausgabe:
 Ausgeben eines Strings, der sich aus Text und dem Inhalt von Variablen
 zusammensetzt 
 	tag = "Freitag"
-	puts "Heute ist {tag}, der#{Time.new}."
+	puts "Heute ist #{tag}, der #{Time.new}."
 		#Am Anfang und am Ende müssen doppelte Anführungszeichen stehen.
 		#innerhalb des Konstruktes #{} kann jeder Ruby-Code ausgeführt werden. Es findet automatisch eine Konvertierung des Ergebnisses in einem String statt.
 
