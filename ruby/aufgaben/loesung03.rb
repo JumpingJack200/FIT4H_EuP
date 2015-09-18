@@ -1,24 +1,20 @@
 class Customer
-	def initialize(paccbank,plastname)
-		@bank_account = paccbank
-		@lastname = plastname
+
+	def initialize(kontonummer,nachname,strasse,ort)	
+		@bank_account = kontonummer
+		@lastname = nachname
+		@street = strasse
+		@where = ort
 	end
 
-	def initialize(pfirstname)
-		@firstname = pfirstname
+	def print_adress
+		puts "#{"Konto" .ljust(40, '.')}#{@bank_account}"
+		puts "#{"Name" .ljust(40, '.')}#{@lastname}"
+		puts "#{"strasse" .ljust(40, '.')}#{@street}"
+		puts "#{"ort" .ljust(40, '.')}#{@where}"
+
 	end
 	
-	def initialize(pstreet)
-		@street = pstreet
-	end
-
-	def initialize(pcity)
-		@city = pcity
-	end
-
-end	
-
-customer1 = Customer.new
-customer1.initialize
-
-puts obj.print.address("#{paccbank = "9999", pfirstname = "TheoLodgz", pstreet = "Hermelinweg7", pcity = "22159Hamburg"}")		
+end
+kunde1 = Customer.new("22145","kaakschlief","Krogstraße","Hamburg")
+puts kunde1.print_adress		
