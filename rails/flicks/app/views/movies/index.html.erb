@@ -1,0 +1,27 @@
+<h1>Movies</h1>
+<p><%= link_to "Neues Movie erstellen", new_movie_path %></p>
+<p>Zeige folgende <%= @movies.size %> Movies an:</p>
+<table width="100%">
+	<tr>
+		 	<th>Title</th>
+    	<th>Rating</th>
+    	<th>Eingespielt</th>
+      <th>Beschreibung</th>
+      <th>Erscheinungsdatum</th>
+    </tr>
+ 			
+	<% @movies.each do |movies| %>
+		<tr>
+			<td><%= movies.title %></td>
+			<td><%= movies.rating %></td>
+			<td><%= format_price(event) %></td>
+			<td><%= movies.start_at %></td>
+			<td><%= truncate(movies.</td>
+			<td><%= link_to "Show", movies_path(movies.id) %></td>
+			<td><%= link_to "Edit", edit_movies_path(movies.id) %></td>
+			<td><%= link_to "Delete", movies_path(event.id), method: :delete, data: {confirm: "Sicher????"} %></td>
+		</tr>
+
+		<% end %>
+
+	</table>
